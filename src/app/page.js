@@ -1,95 +1,118 @@
 import Image from 'next/image'
 import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuIndicator,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-	NavigationMenuViewport
-} from '@/components/ui/navigation-menu'
+	Menubar,
+	MenubarCheckboxItem,
+	MenubarContent,
+	MenubarItem,
+	MenubarMenu,
+	MenubarRadioGroup,
+	MenubarRadioItem,
+	MenubarSeparator,
+	MenubarShortcut,
+	MenubarSub,
+	MenubarSubContent,
+	MenubarSubTrigger,
+	MenubarTrigger,
+  } from "@/components/ui/menubar"
 
 export default function Home() {
 	return (
 		<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-			<NavigationMenu>
-				<NavigationMenuList>
-					<NavigationMenuItem>
-						<NavigationMenuTrigger>
-							Getting started
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-								<li className="row-span-3">
-									<NavigationMenuLink asChild>
-										<a
-											className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-											href="/"
-										>
-											<Icons.logo className="h-6 w-6" />
-											<div className="mb-2 mt-4 text-lg font-medium">
-												shadcn/ui
-											</div>
-											<p className="text-sm leading-tight text-muted-foreground">
-												Beautifully designed components
-												that you can copy and paste into
-												your apps. Accessible.
-												Customizable. Open Source.
-											</p>
-										</a>
-									</NavigationMenuLink>
-								</li>
-								<ListItem href="/docs" title="Introduction">
-									Re-usable components built using Radix UI
-									and Tailwind CSS.
-								</ListItem>
-								<ListItem
-									href="/docs/installation"
-									title="Installation"
-								>
-									How to install dependencies and structure
-									your app.
-								</ListItem>
-								<ListItem
-									href="/docs/primitives/typography"
-									title="Typography"
-								>
-									Styles for headings, paragraphs, lists...etc
-								</ListItem>
-							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-					<NavigationMenuItem>
-						<NavigationMenuTrigger>
-							Components
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-								{components.map(component => (
-									<ListItem
-										key={component.title}
-										title={component.title}
-										href={component.href}
-									>
-										{component.description}
-									</ListItem>
-								))}
-							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-					<NavigationMenuItem>
-						<Link href="/docs" legacyBehavior passHref>
-							<NavigationMenuLink
-								className={navigationMenuTriggerStyle()}
-							>
-								Documentation
-							</NavigationMenuLink>
-						</Link>
-					</NavigationMenuItem>
-				</NavigationMenuList>
-			</NavigationMenu>
-
+			<Menubar>
+				<MenubarMenu>
+					<MenubarTrigger>File</MenubarTrigger>
+					<MenubarContent>
+						<MenubarItem>
+							New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+						</MenubarItem>
+						<MenubarItem>
+							New Window <MenubarShortcut>⌘N</MenubarShortcut>
+						</MenubarItem>
+						<MenubarItem disabled>New Incognito Window</MenubarItem>
+						<MenubarSeparator />
+						<MenubarSub>
+							<MenubarSubTrigger>Share</MenubarSubTrigger>
+							<MenubarSubContent>
+								<MenubarItem>Email link</MenubarItem>
+								<MenubarItem>Messages</MenubarItem>
+								<MenubarItem>Notes</MenubarItem>
+							</MenubarSubContent>
+						</MenubarSub>
+						<MenubarSeparator />
+						<MenubarItem>
+							Print... <MenubarShortcut>⌘P</MenubarShortcut>
+						</MenubarItem>
+					</MenubarContent>
+				</MenubarMenu>
+				<MenubarMenu>
+					<MenubarTrigger>Edit</MenubarTrigger>
+					<MenubarContent>
+						<MenubarItem>
+							Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+						</MenubarItem>
+						<MenubarItem>
+							Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+						</MenubarItem>
+						<MenubarSeparator />
+						<MenubarSub>
+							<MenubarSubTrigger>Find</MenubarSubTrigger>
+							<MenubarSubContent>
+								<MenubarItem>Search the web</MenubarItem>
+								<MenubarSeparator />
+								<MenubarItem>Find...</MenubarItem>
+								<MenubarItem>Find Next</MenubarItem>
+								<MenubarItem>Find Previous</MenubarItem>
+							</MenubarSubContent>
+						</MenubarSub>
+						<MenubarSeparator />
+						<MenubarItem>Cut</MenubarItem>
+						<MenubarItem>Copy</MenubarItem>
+						<MenubarItem>Paste</MenubarItem>
+					</MenubarContent>
+				</MenubarMenu>
+				<MenubarMenu>
+					<MenubarTrigger>View</MenubarTrigger>
+					<MenubarContent>
+						<MenubarCheckboxItem>
+							Always Show Bookmarks Bar
+						</MenubarCheckboxItem>
+						<MenubarCheckboxItem checked>
+							Always Show Full URLs
+						</MenubarCheckboxItem>
+						<MenubarSeparator />
+						<MenubarItem inset>
+							Reload <MenubarShortcut>⌘R</MenubarShortcut>
+						</MenubarItem>
+						<MenubarItem disabled inset>
+							Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+						</MenubarItem>
+						<MenubarSeparator />
+						<MenubarItem inset>Toggle Fullscreen</MenubarItem>
+						<MenubarSeparator />
+						<MenubarItem inset>Hide Sidebar</MenubarItem>
+					</MenubarContent>
+				</MenubarMenu>
+				<MenubarMenu>
+					<MenubarTrigger>Profiles</MenubarTrigger>
+					<MenubarContent>
+						<MenubarRadioGroup value="benoit">
+							<MenubarRadioItem value="andy">
+								Andy
+							</MenubarRadioItem>
+							<MenubarRadioItem value="benoit">
+								Benoit
+							</MenubarRadioItem>
+							<MenubarRadioItem value="Luis">
+								Luis
+							</MenubarRadioItem>
+						</MenubarRadioGroup>
+						<MenubarSeparator />
+						<MenubarItem inset>Edit...</MenubarItem>
+						<MenubarSeparator />
+						<MenubarItem inset>Add Profile...</MenubarItem>
+					</MenubarContent>
+				</MenubarMenu>
+			</Menubar>
 			<main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 				<Image
 					className="dark:invert"
