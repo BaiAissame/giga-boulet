@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-export default function CoinFamille() {
+export default function page() {
   return (
     <div>
       <Head>
