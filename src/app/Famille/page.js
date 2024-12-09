@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Famille</div>
+    <div>Famille et plus</div>
   )
 } 
