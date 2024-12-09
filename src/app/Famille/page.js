@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-export default function page() {
+export default function Famille() {
   return (
     <div>
       <Head>
@@ -15,9 +15,9 @@ export default function page() {
 
       <main>
         <section className="coin-famille">
-          <h1>Le Coin Famille - Chez Giga Boulet, la famille est à l'honneur !</h1>
+          <h1>Le Coin Famille - Chez Giga Boulet, la famille est à l&apos;honneur !</h1>
 
-          <p>Les enfants ont l'embarras du choix !</p>
+          <p>Les enfants ont l&apos;embarras du choix !</p>
           
           <h2>Nos menus enfants</h2>
           <p>Découvrez nos menus Boulet Junior et Boulet Junior +, spécialement conçus pour les plus jeunes. Profitez d'une réduction immédiate de 0,30€ si vous ne souhaitez pas de jouet avec le menu !</p>
@@ -37,7 +37,7 @@ export default function page() {
           <section className="anniversaire">
             <h2>Le plus incroyable des anniversaires</h2>
             <p>Offrez à vos enfants un anniversaire inoubliable avec Giga Boulet ! Des animations, des surprises et bien plus encore.</p>
-            <a href="/anniversaire" className="button">Réservez l'anniversaire</a>
+            <a href="/anniversaire" className="button">Réservez l&apos;anniversaire</a>
           </section>
 
           <section className="fidelite">
