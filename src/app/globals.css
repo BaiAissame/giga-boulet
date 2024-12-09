@@ -70,3 +70,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer utilities {
+  tr:nth-child(odd) td {
+    @apply bg-yellow-400 text-black;
+  }
+  tr:nth-child(even) td {
+    @apply bg-black text-yellow-400;
+  }
+}
