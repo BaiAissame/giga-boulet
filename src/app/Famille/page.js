@@ -20,7 +20,7 @@ export default function Famille() {
           <p>Les enfants ont l&apos;embarras du choix !</p>
           
           <h2>Nos menus enfants</h2>
-          <p>Découvrez nos menus Boulet Junior et Boulet Junior +, spécialement conçus pour les plus jeunes. Profitez d'une réduction immédiate de 0,30€ si vous ne souhaitez pas de jouet avec le menu !</p>
+          <p>Découvrez nos menus Boulet Junior et Boulet Junior +, spécialement conçus pour les plus jeunes. Profitez d&apos;une réduction immédiate de 0,30€ si vous ne souhaitez pas de jouet avec le menu !</p>
           
           <div className="cta-buttons">
             <a href="/commander" className="button">Commander</a>
