@@ -2,6 +2,12 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Recrutement</div>
+    <div>
+      <h1>hello</h1>
+      <div>Recrutement</div>
+
+    </div>
+
+
   )
 } 
