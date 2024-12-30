@@ -1,4 +1,5 @@
 import React from 'react'
+import { drizzle } from 'drizzle-orm/neon-http';
 import {
 	Card,
 	CardContent,
@@ -8,7 +9,6 @@ import {
 	CardTitle
 } from '@/components/ui/card'
 import Image from 'next/image'
-
 
 export default async function page() {
 	return (
@@ -32,139 +32,103 @@ export default async function page() {
 				</table>
 			</section>
 			<section className="justify-center">
-				<h1>Notre Carte</h1>
-				<p>texte</p>
+				<h1 className="m-2">Notre Carte</h1>
+				<p className="text-center">Aucune excuse, faites-vous plaisir : il y en a pour tous les goûts !</p>
 				<ul className="flex flex-wrap justify-center">
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										alt="image"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
-					<li>
+					<li className="m-4">
 						<article>
 							<Card>
 								<CardHeader>
 									<CardTitle>Nouveauté</CardTitle>
-									<CardDescription>
-										Card Description
-									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Image
-										src="next.svg"
+										src="/burgerblack.jpg"
 										width={200}
 										height={200}
 									/>
 								</CardContent>
-								<CardFooter>
-									<p>Card Footer</p>
-								</CardFooter>
 							</Card>
 						</article>
 					</li>
