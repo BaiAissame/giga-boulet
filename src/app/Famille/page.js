@@ -1,70 +1,68 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 export default function Famille() {
-  return (
-    <div>
-      <Head>
-        <title>Le Coin Famille - Giga Boulet</title>
-        <meta name="description" content="Chez Giga Boulet, la famille est à l'honneur ! Découvrez nos menus enfants et notre offre spéciale avec des réductions." />
-        <meta name="keywords" content="Giga Boulet, menus enfants, offres famille, anniversaire Giga Boulet, aire de jeux Giga Boulet, Boulet Junior, Giga Burger" />
-        <meta property="og:title" content="Le Coin Famille - Giga Boulet" />
-        <meta property="og:description" content="Offrez à vos enfants un moment unique avec les menus enfants de Giga Boulet. Profitez des aires de jeux et des réductions !" />
-        <meta name="robots" content="index, follow" />
-      </Head>
+    return (
+        <>
+            <Head>
+                <title>Famille - Giga Boulet</title>
 
-      <main>
-        <section className="coin-famille">
-          <h1>Le Coin Famille - Chez Giga Boulet, la famille est à l&apos;honneur !</h1>
+                {/* SEO : Meta description pour décrire succinctement la page */}
+                <meta name="description" content="Découvrez notre espace famille dédié, conçu pour le plaisir des petits et des grands chez Giga Boulet." />
 
-          <p>Les enfants ont l&apos;embarras du choix !</p>
+                {/* SEO : Mots-clés stratégiques pour les moteurs de recherche */}
+                <meta name="keywords" content="Giga Boulet, espace famille, repas en famille, jeux pour enfants, fast food" />
 
-          <Image 
-            src="/path-to-image.jpg" 
-            alt="Illustration des menus enfants Boulet Junior de Giga Boulet" 
-            width={600} 
-            height={400} 
-          />
+                {/* SEO : Open Graph pour un meilleur partage sur les réseaux sociaux */}
+                <meta property="og:title" content="Famille - Giga Boulet" />
+                <meta property="og:description" content="Profitez de moments inoubliables en famille avec des repas délicieux et des espaces ludiques pour les enfants." />
+                <meta property="og:image" content="/images/famille.jpg" />
+            </Head>
 
-          <h2>Nos menus enfants</h2>
-          <p>Découvrez nos menus Boulet Junior et Boulet Junior +, spécialement conçus pour les plus jeunes. Profitez d&apos;une réduction immédiate de 0,30€ si vous ne souhaitez pas de jouet avec le menu !</p>
-          
-          <div className="cta-buttons">
-            <a href="/commander" className="button">Commander</a>
-            <a href="/trouver-restaurant" className="button">Trouver un restaurant</a>
-            <a href="/anniversaire" className="button">Réservez votre anniversaire</a>
-          </div>
+            <header className="bg-teal-900 text-white py-4 text-center shadow-md">
+                <nav>
+                    <ul className="flex justify-center space-x-6">
+                        {/* Liens internes avec des ancres descriptives */}
+                        <li><a href="/" className="hover:underline">Accueil</a></li>
+                        <li><a href="/Carte" className="hover:underline">Menu</a></li>
+                        <li><a href="/famille" className="underline">Famille</a></li>
+                        <li><a href="/Propos" className="hover:underline">À Propos</a></li>
+                        <li><a href="/Engagements" className="hover:underline">Contact</a></li>
+                        <li><a href="/Recrutement" className="hover:underline">Recrutement</a></li>
+                        <li><a href="/Offre" className="hover:underline">Offre</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-          <section className="aires-de-jeux">
-            <h2>Nos aires de jeux</h2>
-            <p>Nos aires de jeux sont prêtes à accueillir vos enfants pour un moment de plaisir, pendant que vous dégustez votre Giga Burger® en toute tranquillité !</p>
-            <Image 
-              src="/path-to-playground.jpg" 
-              alt="Photo de nos aires de jeux pour enfants chez Giga Boulet" 
-              width={600} 
-              height={400} 
-            />
-            <a href="/trouver-restaurant" className="button">Trouver un restaurant avec aire de jeux</a>
-          </section>
+            <main>
+                {/* Section héroïque avec image de fond pour capter l&apos;attention */}
+                <section className="bg-cover bg-center text-white py-16" style={{ backgroundImage: 'url(/images/famille-hero.jpg)' }}>
+                    <h1 className="text-4xl font-bold">Bienvenue dans l&apos;Espace Famille</h1>
+                    <p className="mt-4 text-lg">Un endroit dédié au plaisir des petits et des grands. Chez Giga Boulet, nous savons que chaque famille est unique, et nous faisons en sorte de créer un espace où chacun se sent chez soi.</p>
+                </section>
 
-          <section className="anniversaire">
-            <h2>Le plus incroyable des anniversaires</h2>
-            <p>Offrez à vos enfants un anniversaire inoubliable avec Giga Boulet ! Des animations, des surprises et bien plus encore.</p>
-            <Image 
-              src="/path-to-birthday.jpg" 
-              alt="Image d'un anniversaire organisé chez Giga Boulet" 
-              width={600} 
-              height={400} 
-            />
-            <a href="/anniversaire" className="button">Réservez l&apos;anniversaire</a>
-          </section>
+                {/* Section enfants pour décrire les offres et l&apos;aire de jeux */}
+                <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
+                    <h2 className="text-2xl font-bold text-teal-900 mb-4">Pour les Enfants</h2>
+                    <p>Des menus enfants équilibrés, des cadeaux surprises et une aire de jeux sécurisée pour que vos petits passent un moment inoubliable. Nos repas pour enfants sont conçus pour répondre à leurs besoins nutritionnels tout en étant délicieux et amusants. De plus, notre aire de jeux est régulièrement entretenue pour garantir leur sécurité et leur plaisir.</p>
+                    <img src="/images/aire-de-jeux.jpg" alt="Aire de jeux pour enfants chez Giga Boulet" className="mt-4 rounded-lg shadow-md" />
+                </section>
 
-          <section className="fidelite">
-            <h2>Exclusivement avec votre programme de fidélité Giga Club</h2>
-            <p>Profitez de nos avantages et réductions supplémentaires en vous inscrivant à notre programme de fidélité Giga Club.</p>
-          </section>
-        </section>
-      </main>
-    </div>
-  );
+                {/* Section parents pour mettre en avant leur confort */}
+                <section className="p-8 bg-teal-50 shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
+                    <h2 className="text-2xl font-bold text-teal-900 mb-4">Pour les Parents</h2>
+                    <p>Détendez-vous dans un cadre confortable tout en dégustant nos spécialités. Nous avons pensé à tout pour que votre expérience soit parfaite. Chez Giga Boulet, nous savons qu’un moment de détente pour les parents est aussi important. C’est pourquoi nous offrons un cadre agréable, des sièges confortables et un menu varié pour répondre à toutes vos envies.</p>
+                </section>
+
+                {/* Section supplémentaire pour les offres spéciales */}
+                <section className="p-8 bg-gray-100 shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
+                    <h2 className="text-2xl font-bold text-teal-900 mb-4">Offres Spéciales Famille</h2>
+                    <p>Chez Giga Boulet, nous aimons récompenser les moments passés en famille. Profitez de nos packs familiaux à des prix avantageux, comprenant des repas pour tous les âges. Chaque pack est soigneusement élaboré pour inclure une variété de nos spécialités, afin que chacun y trouve son bonheur.</p>
+                </section>
+            </main>
+
+            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
+                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
+            </footer>
+        </>
+    );
 }
