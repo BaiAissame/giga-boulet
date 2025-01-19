@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
 
 export default function Famille() {
     return (
@@ -22,13 +24,13 @@ export default function Famille() {
                 <nav>
                     <ul className="flex justify-center space-x-6">
                         {/* Liens internes avec des ancres descriptives */}
-                        <li><a href="/" className="hover:underline">Accueil</a></li>
-                        <li><a href="/Carte" className="hover:underline">Menu</a></li>
-                        <li><a href="/famille" className="underline">Famille</a></li>
-                        <li><a href="/Propos" className="hover:underline">À Propos</a></li>
-                        <li><a href="/Engagements" className="hover:underline">Contact</a></li>
-                        <li><a href="/Recrutement" className="hover:underline">Recrutement</a></li>
-                        <li><a href="/Offre" className="hover:underline">Offre</a></li>
+                        <li><Link href="/" className="hover:underline">Accueil</Link></li>
+                        <li><Link href="/Carte" className="hover:underline">Menu</Link></li>
+                        <li><Link href="/famille" className="underline">Famille</Link></li>
+                        <li><Link href="/Propos" className="hover:underline">À Propos</Link></li>
+                        <li><Link href="/Engagements" className="hover:underline">Contact</Link></li>
+                        <li><Link href="/Recrutement" className="hover:underline">Recrutement</Link></li>
+                        <li><Link href="/Offre" className="hover:underline">Offre</Link></li>
                     </ul>
                 </nav>
             </header>

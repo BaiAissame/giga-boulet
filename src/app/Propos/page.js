@@ -26,13 +26,13 @@ export default function Propos() {
                 <nav>
                     <ul className="flex justify-center space-x-6">
                         {/* Navigation avec des liens internes */}
-                        <li><a href="/" className="hover:underline">Accueil</a></li>
-                        <li><a href="/Carte" className="hover:underline">Menu</a></li>
-                        <li><a href="/famille" className="hover:underline">Famille</a></li>
-                        <li><a href="/Propos" className="underline">À Propos</a></li>
-                        <li><a href="/Engagements" className="hover:underline">Contact</a></li>
-                        <li><a href="/Recrutement" className="hover:underline">Recrutement</a></li>
-                        <li><a href="/Offre" className="hover:underline">Offre</a></li>
+                        <li><Link href="/" className="hover:underline">Accueil</Link></li>
+                        <li><Link href="/Carte" className="hover:underline">Menu</Link></li>
+                        <li><Link href="/famille" className="hover:underline">Famille</Link></li>
+                        <li><Link href="/Propos" className="underline">À Propos</Link></li>
+                        <li><Link href="/Engagements" className="hover:underline">Contact</Link></li>
+                        <li><Link href="/Recrutement" className="hover:underline">Recrutement</Link></li>
+                        <li><Link href="/Offre" className="hover:underline">Offre</Link></li>
                     </ul>
                 </nav>
             </header>
@@ -91,9 +91,9 @@ export default function Propos() {
             <footer className="bg-gray-800 text-white py-6 text-center mt-8">
                 <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
                 <p>Suivez-nous sur&nbsp;
-                    <a href="https://facebook.com/gigaboulet" className="text-teal-400 hover:underline">Facebook</a>,&nbsp;
-                    <a href="https://instagram.com/gigaboulet" className="text-teal-400 hover:underline">Instagram</a>,&nbsp;
-                    <a href="https://twitter.com/gigaboulet" className="text-teal-400 hover:underline">Twitter</a>
+                    <Link href="https://facebook.com/gigaboulet" className="text-teal-400 hover:underline">Facebook</Link>,&nbsp;
+                    <Link href="https://instagram.com/gigaboulet" className="text-teal-400 hover:underline">Instagram</Link>,&nbsp;
+                    <Link href="https://twitter.com/gigaboulet" className="text-teal-400 hover:underline">Twitter</Link>
                 </p>
             </footer>
         </>
