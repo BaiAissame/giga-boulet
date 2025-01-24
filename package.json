@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "drizzle-kit migrate:pg",
+    "push": "drizzle-kit push",
+    "seed": "node src/db/seed.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -20,21 +24,22 @@
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "drizzle-orm": "^0.38.1",
+    "drizzle-orm": "^0.38.4",
     "lucide-react": "^0.460.0",
     "next": "^15.0.4",
+    "next-logger": "^5.0.1",
+    "pino": "^9.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "drizzle-kit": "^0.29.1",
+    "drizzle-kit": "^0.30.2",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2"
   }
 }
