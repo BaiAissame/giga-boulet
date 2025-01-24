@@ -1,99 +1,48 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
+import { getSubcategories } from '@/lib/getSubcategories'; // Importez la fonction
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { drizzleDb } from '@/lib/drizzle';
 import { categories } from '@/lib/schema';
+import Sidebar from '@/components/Sidebar'; // Importer le composant Sidebar
 
-async function getMenus() {
-  const query = drizzleDb
-    .select({
-      id: categories.id,
-      title: categories.title,
-      image: categories.image,
-      link: categories.link,
-    })
-    .from(categories)
-    .orderBy(categories.id);
-
-
-  const result = await query;
-  return result.map((row) => ({
-    id: row.id,
-    title: row.title,
-    image: row.image,
-    link: `/Carte/${encodeURIComponent(row.title)}`,
-  }));
-}
-
-// Cette page récupère tous les menus associés à une catégorie donnée
 export default async function CategoryPage({ params }) {
-  const { category } =  await params
+  const { category } = await params;
   const decodeCategory = decodeURIComponent(category); // Décoder le paramètre 'category'
-  const menus = await getMenus();
+  const subcategories = await getSubcategories(decodeCategory); // Récupérer les sous-catégories pour la catégorie
 
-
-  // Exemple de données qui pourraient être récupérées pour chaque catégorie
-  // Vous pouvez récupérer ces données depuis une API ou une base de données
-
-  const cards = [
-      { id: 1, title: 'Burger Nouveauté 1', image: '/burgerblack.jpg', link: '/Carte/Nouveauté/1' },
-      { id: 2, title: 'Burger Nouveauté 2', image: '/burgerblack.jpg', link: '/Carte/Nouveauté/2' },
-      { id: 3, title: 'Burger Nouveauté 3', image: '/burgerblack.jpg', link: '/Carte/Nouveauté/3' }
-    ]
-
-  
   return (
     <div className="flex">
-      {/* Sidebar de navigation (si vous avez une barre latérale pour les catégories) */}
-      <section className="w-[20vw] h-[100vh]">
-        <table className="w-full h-full table-fixed border-collapse">
-          <tbody>
-            <tr>
-              <td className="py-4 px-2 text-center">Nouveauté</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-2 text-center">Bon Plan</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-2 text-center">Menus</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-2 text-center">Burgers</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      {/* Sidebar de navigation */}
+      <Sidebar />
 
       {/* Section des cartes */}
-			<section className="justify-center">
-        <h1 className="m-2">Menus {decodeCategory}</h1>
-        <p className="text-center">
-          Découvrez tous les menus de la catégorie {decodeCategory}.
+      <section className="flex-1 p-8">
+        <h1 className="text-3xl font-bold mb-8">Notre Carte</h1>
+        <p className="text-center mb-8">
+          Aucune excuse, faites-vous plaisir : il y en a pour tous les goûts !
         </p>
 
         {/* Grille des cartes pour cette catégorie */}
-				<ul className="grid grid-cols-3 gap-4">
-          {cards.map((card) => (
-            <li key={card.id} className="m-4">
-              <Link href={card.link}>
+        <ul className="grid grid-cols-3 gap-4">
+          {subcategories.map((subcategory) => (
+            <li key={subcategory.id} className="m-4">
+              <Link href={subcategory.link}>
                 <article>
-                  <Card>
+                  <Card className="w-full max-w-sm"> {/* Limiter la largeur des cartes */}
                     <CardHeader>
-                      <CardTitle>{card.title}</CardTitle>
+                      <CardTitle className="text-center">{subcategory.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={200}
-                        height={200}
-                      />
+                    <CardContent className="flex justify-center">
+                      <div className="w-48 h-48 relative"> {/* Conteneur pour l'image */}
+                        <Image
+                          src={subcategory.image || '/default-image.jpg'} // Image de secours
+                          alt={subcategory.title}
+                          fill // Remplir le conteneur parent
+                          className="object-cover rounded-lg" // Adapter l'image au conteneur
+                        />
+                      </div>
                     </CardContent>
                   </Card>
                 </article>
@@ -103,5 +52,5 @@ export default async function CategoryPage({ params }) {
         </ul>
       </section>
     </div>
-  )
+  );
 }
