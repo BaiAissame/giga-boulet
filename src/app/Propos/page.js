@@ -22,27 +22,24 @@ export default function Propos() {
                 <meta property="og:type" content="website" />
             </Head>
 
-            <header className="bg-teal-900 text-white py-4 text-center shadow-md">
-                <nav>
-                    <ul className="flex justify-center space-x-6">
-                        {/* Navigation avec des liens internes */}
-                        <li><Link href="/" className="hover:underline">Accueil</Link></li>
-                        <li><Link href="/Carte" className="hover:underline">Menu</Link></li>
-                        <li><Link href="/famille" className="hover:underline">Famille</Link></li>
-                        <li><Link href="/Propos" className="underline">À Propos</Link></li>
-                        <li><Link href="/Engagements" className="hover:underline">Contact</Link></li>
-                        <li><Link href="/Recrutement" className="hover:underline">Recrutement</Link></li>
-                        <li><Link href="/Offre" className="hover:underline">Offre</Link></li>
-                    </ul>
-                </nav>
-            </header>
+
 
             <main>
-                {/* Section héroïque avec un message clair */}
-                <section className="bg-cover bg-center text-white py-16" style={{ backgroundImage: 'url(/images/a-propos-hero.jpg)' }}>
-                    <h1 className="text-4xl font-bold">À Propos de Giga Boulet</h1>
+      <section
+  className="relative bg-cover bg-center text-white py-16"
+  style={{ backgroundImage: 'url(/offres.webp)' }}
+>
+  {/* Superposition semi-transparente */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Contenu textuel */}
+  <div className="relative z-10 text-center px-4 sm:px-8">
+
+
+       <h1 className="text-4xl font-bold">À Propos de Giga Boulet</h1>
                     <p className="mt-4 text-lg">Découvrez notre passion pour la restauration rapide, notre mission et nos valeurs qui nous guident chaque jour.</p>
-                </section>
+  </div>
+</section>
 
                 {/* Section Histoire avec des détails riches */}
                 <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">

@@ -20,27 +20,29 @@ export default function Famille() {
                 <meta property="og:image" content="/images/famille.jpg" />
             </Head>
 
-            <header className="bg-teal-900 text-white py-4 text-center shadow-md">
-                <nav>
-                    <ul className="flex justify-center space-x-6">
-                        {/* Liens internes avec des ancres descriptives */}
-                        <li><Link href="/" className="hover:underline">Accueil</Link></li>
-                        <li><Link href="/Carte" className="hover:underline">Menu</Link></li>
-                        <li><Link href="/famille" className="underline">Famille</Link></li>
-                        <li><Link href="/Propos" className="hover:underline">À Propos</Link></li>
-                        <li><Link href="/Engagements" className="hover:underline">Contact</Link></li>
-                        <li><Link href="/Recrutement" className="hover:underline">Recrutement</Link></li>
-                        <li><Link href="/Offre" className="hover:underline">Offre</Link></li>
-                    </ul>
-                </nav>
-            </header>
 
             <main>
-                {/* Section héroïque avec image de fond pour capter l&apos;attention */}
-                <section className="bg-cover bg-center text-white py-16" style={{ backgroundImage: 'url(/images/famille-hero.jpg)' }}>
-                    <h1 className="text-4xl font-bold">Bienvenue dans l&apos;Espace Famille</h1>
-                    <p className="mt-4 text-lg">Un endroit dédié au plaisir des petits et des grands. Chez Giga Boulet, nous savons que chaque famille est unique, et nous faisons en sorte de créer un espace où chacun se sent chez soi.</p>
-                </section>
+                {/* Section héroïque  */}
+<section
+  className="relative bg-cover bg-center text-white py-16"
+  style={{ backgroundImage: 'url(/offres.webp)' }}
+>
+  {/* Superposition semi-transparente */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Contenu textuel */}
+  <div className="relative z-10 text-center px-4 sm:px-8">
+    <h1 className="text-4xl font-bold drop-shadow-lg">
+      Bienvenue dans l&apos;Espace Famille 
+    </h1>
+    <p className="mt-4 text-lg drop-shadow-md">
+      Un endroit dédié au plaisir des petits et des grands. Chez Giga Boulet, 
+      nous savons que chaque famille est unique, et nous faisons en sorte de 
+      créer un espace où chacun se sent chez soi.
+    </p>
+  </div>
+</section>
+
 
                 {/* Section enfants pour décrire les offres et l&apos;aire de jeux */}
                 <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
@@ -66,5 +68,8 @@ export default function Famille() {
                 <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
             </footer>
         </>
+
+        //backlink
+        //lien interne
     );
 }
