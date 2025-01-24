@@ -26,7 +26,7 @@ export default function Propos() {
                 {/* Section bannière avec liens rapides */}
                 <section
                     className="relative bg-cover bg-center text-white py-16"
-                    style={{ backgroundImage: 'url(/offres.webp)' }}
+                    style={{ backgroundImage: 'url(https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/banner.jpg)' }}
                 >
                     {/* Superposition semi-transparente */}
                     <div className="absolute inset-0 bg-black/50"></div>
