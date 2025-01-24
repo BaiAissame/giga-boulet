@@ -1,4 +1,6 @@
 import React from 'react'
+import Head from 'next/head';
+import Link from 'next/link';
 import { drizzle } from 'drizzle-orm/neon-http';
 import {
 	Card,
@@ -134,6 +136,8 @@ export default async function page() {
 					</li>
 				</ul>
 			</section>
+			    
 		</div>
+		
 	)
 }

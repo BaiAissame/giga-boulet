@@ -1,4 +1,6 @@
-import Head from 'next/head'
+
+import Head from 'next/head';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -135,14 +137,15 @@ export default function Page() {
           </li>
         </ul>
 
-        <footer className="text-center mt-16">
-          <p className="text-xl text-gray-700">
-            Merci de choisir Gigaboulet pour savourer des burgers de
-            qualité. Nous sommes impatients de vous servir et de
-            vous offrir une expérience inoubliable inspirée des
-            Dalton !
-          </p>
-        </footer>
+     
+            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
+                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
+                <p>
+                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
+                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
+                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
+                </p>
+            </footer>
       </div>
     </>
   )

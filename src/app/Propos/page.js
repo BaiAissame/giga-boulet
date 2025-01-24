@@ -22,34 +22,42 @@ export default function Propos() {
                 <meta property="og:type" content="website" />
             </Head>
 
-
-
             <main>
-      <section
-  className="relative bg-cover bg-center text-white py-16"
-  style={{ backgroundImage: 'url(/offres.webp)' }}
->
-  {/* Superposition semi-transparente */}
-  <div className="absolute inset-0 bg-black/50"></div>
+                {/* Section bannière avec liens rapides */}
+                <section
+                    className="relative bg-cover bg-center text-white py-16"
+                    style={{ backgroundImage: 'url(/offres.webp)' }}
+                >
+                    {/* Superposition semi-transparente */}
+                    <div className="absolute inset-0 bg-black/50"></div>
 
-  {/* Contenu textuel */}
-  <div className="relative z-10 text-center px-4 sm:px-8">
+                    {/* Contenu textuel */}
+                    <div className="relative z-10 text-center px-4 sm:px-8">
+                        <h1 className="text-4xl font-bold">À Propos de Giga Boulet</h1>
+                        <p className="mt-4 text-lg">Découvrez notre passion pour la restauration rapide, notre mission et nos valeurs qui nous guident chaque jour.</p>
+                        <div className="mt-6">
+                            <Link href="#histoire" className="text-teal-400 hover:underline px-4">
+                                Notre Histoire
+                            </Link>
+                            <Link href="#valeurs" className="text-teal-400 hover:underline px-4">
+                                Nos Valeurs
+                            </Link>
+                            <Link href="#mission" className="text-teal-400 hover:underline px-4">
+                                Notre Mission
+                            </Link>
+                        </div>
+                    </div>
+                </section>
 
-
-       <h1 className="text-4xl font-bold">À Propos de Giga Boulet</h1>
-                    <p className="mt-4 text-lg">Découvrez notre passion pour la restauration rapide, notre mission et nos valeurs qui nous guident chaque jour.</p>
-  </div>
-</section>
-
-                {/* Section Histoire avec des détails riches */}
-                <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
+                {/* Section Histoire */}
+                <section id="histoire" className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Notre Histoire</h2>
                     <p>Depuis 2010, Giga Boulet s&apos;engage à offrir des repas délicieux et accessibles. Ce qui a commencé comme une petite aventure locale est aujourd&apos;hui devenu une chaîne appréciée dans toute la région. Nous croyons en la puissance de la bonne nourriture pour rassembler les gens et créer des souvenirs.</p>
                     <Image src="/images/histoire.jpg" alt="Chronologie de Giga Boulet" width={600} height={400} className="mt-4 rounded-lg shadow-md" />
                 </section>
 
-                {/* Section Valeurs enrichie */}
-                <section className="p-8 bg-gray-100 shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
+                {/* Section Valeurs */}
+                <section id="valeurs" className="p-8 bg-gray-100 shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Nos Valeurs</h2>
                     <article className="mb-6">
                         <h3 className="text-xl font-semibold text-gray-800">Qualité</h3>
@@ -65,13 +73,16 @@ export default function Propos() {
                     </article>
                 </section>
 
-                {/* Section Mission enrichie avec des objectifs clairs */}
-                <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
+                {/* Section Mission */}
+                <section id="mission" className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Notre Mission</h2>
                     <p>Chez Giga Boulet, notre mission est simple mais puissante : offrir des repas savoureux et de qualité tout en créant un environnement chaleureux pour nos clients. Nous croyons que chaque repas est une occasion de se connecter et de partager des moments précieux.</p>
+                    <Link href="/menu" className="text-teal-400 hover:underline block mt-4">
+                        Découvrez notre menu
+                    </Link>
                 </section>
 
-                {/* Témoignages étoffés */}
+                {/* Témoignages */}
                 <section className="p-8 bg-gray-100 shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Ce Que Dit Notre Équipe</h2>
                     <blockquote className="italic text-gray-600 border-l-4 border-teal-900 bg-teal-100 p-4 rounded-md shadow">
@@ -87,10 +98,10 @@ export default function Propos() {
 
             <footer className="bg-gray-800 text-white py-6 text-center mt-8">
                 <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
-                <p>Suivez-nous sur&nbsp;
-                    <Link href="https://facebook.com/gigaboulet" className="text-teal-400 hover:underline">Facebook</Link>,&nbsp;
-                    <Link href="https://instagram.com/gigaboulet" className="text-teal-400 hover:underline">Instagram</Link>,&nbsp;
-                    <Link href="https://twitter.com/gigaboulet" className="text-teal-400 hover:underline">Twitter</Link>
+                <p>
+                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
+                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
+                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
                 </p>
             </footer>
         </>

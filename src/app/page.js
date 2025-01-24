@@ -86,10 +86,10 @@ export default function Home() {
 
             <footer className="bg-gray-800 text-white py-6 text-center mt-8">
                 <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
-                <p>Suivez-nous sur&nbsp;
-                    <Link href="https://facebook.com/gigaboulet" className="text-teal-400 hover:underline">Facebook</Link>,&nbsp;
-                    <Link href="https://instagram.com/gigaboulet" className="text-teal-400 hover:underline">Instagram</Link>,&nbsp;
-                    <Link href="https://twitter.com/gigaboulet" className="text-teal-400 hover:underline">Twitter</Link>
+                <p>
+                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
+                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
+                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
                 </p>
             </footer>
         </>

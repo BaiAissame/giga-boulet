@@ -1,5 +1,6 @@
 'use client'; // Directive pour indiquer qu'il s'agit d'un composant côté client
-
+import Head from 'next/head';
+import Link from 'next/link';
 import * as React from 'react';
 import {
   Container,
@@ -134,14 +135,15 @@ export default function RecruitmentPage() {
         </form>
       </Box>
 
-      <Box sx={{ textAlign: 'center', my: 4 }}>
-        <Typography variant="h5" gutterBottom>
-          Contacter l'équipe
-        </Typography>
-        <Typography variant="body1">
-          Pour toute question, contactez-nous à <strong>contact@giga-boulet.com</strong>
-        </Typography>
-      </Box>
+      
+            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
+                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
+                <p>
+                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
+                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
+                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
+                </p>
+            </footer>
     </Container>
   );
 }
