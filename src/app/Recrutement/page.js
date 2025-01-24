@@ -6,100 +6,113 @@ import {
   Container,
   Typography,
   Box,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
   Button,
-  TextField
+  TextField,
+  Card,
+  CardContent,
+  Grid,
 } from '@mui/material';
-import Grid from '@mui/material/Grid2';
 
 export default function RecruitmentPage() {
-  const [age, setAge] = React.useState('');
+  // Utilisation d'une vérification pour les actions côté client uniquement
+  const [isBrowser, setIsBrowser] = React.useState(false);
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  React.useEffect(() => {
+    setIsBrowser(true);
+  }, []);
 
+  // Rendu uniquement côté client (évite les erreurs de hydration)
+  if (!isBrowser) return null;
   return (
     <Container maxWidth="lg">
-      <Box sx={{ mt: 8, textAlign: 'center' }}>
-        <Typography variant="h3" gutterBottom>
+      {/* Section Header */}
+      <Box
+        sx={{
+          mt: 10,
+          textAlign: 'center',
+          py: 4,
+          backgroundColor: '#e6f8f6',
+          borderRadius: 2,
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{ color: 'teal', fontWeight: 'bold', mb: 2 }}
+        >
           Rejoignez notre équipe !
         </Typography>
-        <Typography variant="h6" paragraph>
-          Nous sommes à la recherche de talents passionnés pour rejoindre notre équipe dynamique. Sélectionnez un type de poste ci-dessous pour commencer votre candidature.
+        <Typography variant="h6" sx={{ maxWidth: '700px', mx: 'auto' }}>
+          Nous sommes toujours à la recherche de personnes talentueuses et motivées pour rejoindre notre équipe dynamique. Faites-nous parvenir vos coordonnées ainsi qu’un message de motivation en bas de cette page, et démarrez peut-être une belle aventure avec nous !
         </Typography>
       </Box>
 
-
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <FormControl variant="filled" sx={{ m: 1, minWidth: 260 }}>
-          <InputLabel id="demo-simple-select-filled-label">Sélectionner un type de poste</InputLabel>
-          <Select
-            labelId="demo-simple-select-filled-label"
-            id="demo-simple-select-filled"
-            color='transparent'
-            value={age}
-            onChange={handleChange}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Équipier(ère) polyvalent</MenuItem>
-            <MenuItem value={20}>Manager</MenuItem>
-            <MenuItem value={30}>Directeur</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl variant="filled" sx={{ m: 1, minWidth: 260 }}>
-          <InputLabel id="demo-simple-select-filled-label">Sélectionner une ville</InputLabel>
-          <Select
-            labelId="demo-simple-select-filled-label"
-            id="demo-simple-select-filled"
-            value={age}
-          // onChange={handleChange}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Équipier(ère) polyvalent</MenuItem>
-            <MenuItem value={20}>Manager</MenuItem>
-            <MenuItem value={30}>Directeur</MenuItem>
-          </Select>
-        </FormControl>
-      </Box><br></br>
-
-
-      <Box>
+      {/* Section Description */}
+      <Box sx={{ mt: 6 }}>
         <Grid
-          spacing={10}
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between', // Alignement à la fin
-            gap: '15rem',
-          }}
+          container
+          spacing={4}
+          justifyContent="space-between"
+          alignItems="center"
         >
-          <Box sx={{ width: '30%' }}>
-            <Typography variant="h4">
-              Les différents postes au sein des équipes <strong>Gigaboulet</strong>
-            </Typography>
-          </Box>
+          <Grid item xs={12} md={6}>
+            <Card
+              sx={{
+                backgroundColor: '#f1faf9',
+                boxShadow: '0 4px 10px rgba(0, 128, 128, 0.2)',
+                borderRadius: 2,
+                padding: 2,
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{ color: 'teal', fontWeight: 'bold', mb: 2 }}
+                >
+                  Les différents postes chez <strong>Gigaboulet</strong>
+                </Typography>
+                <Typography variant="body1">
+                  Nous offrons des opportunités pour les équipiers(ères),
+                  managers et directeurs passionnés par leur métier. Vous aurez
+                  la chance de grandir dans un environnement collaboratif.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
 
-          <Box sx={{ width: '30%' }}>
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-              molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-              numquam blanditiis harum quisquam eius sed odit fugiat
-            </Typography>
-          </Box>
+          <Grid item xs={12} md={6}>
+            <Card
+              sx={{
+                backgroundColor: '#f1faf9',
+                boxShadow: '0 4px 10px rgba(0, 128, 128, 0.2)',
+                borderRadius: 2,
+                padding: 2,
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{ color: 'teal', fontWeight: 'bold', mb: 2 }}
+                >
+                  Pourquoi nous rejoindre ?
+                </Typography>
+                <Typography variant="body1">
+                  Travailler chez <strong>Gigaboulet</strong>, c’est intégrer
+                  une équipe innovante qui valorise vos compétences et vous aide
+                  à évoluer. Faites le premier pas vers une carrière enrichissante.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </Box>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h5" gutterBottom>
+      {/* Section Formulaire */}
+      {/* Section Formulaire */}
+      <Box sx={{ mt: 6, textAlign: 'center' }}>
+        <Typography
+          variant="h5"
+          sx={{ textAlign: 'center', color: 'teal', fontWeight: 'bold', mb: 3 }}
+        >
           Informations personnelles
         </Typography>
         <form noValidate autoComplete="off">
