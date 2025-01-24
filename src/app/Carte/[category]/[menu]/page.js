@@ -40,7 +40,7 @@ function groupMenuWithIngredients(menuDetails) {
   const groupedMenu = {
     ...menuDetails[0],
     ingredients: menuDetails
-      .filter((row) => row.ingredients.name) // Filtrer les lignes avec des ingrédients
+      .filter((row) => row.ingredients && row.ingredients.name) // Vérifier si row.ingredients existe
       .map((row) => ({
         name: row.ingredients.name,
         quantity: row.ingredients.quantity,
