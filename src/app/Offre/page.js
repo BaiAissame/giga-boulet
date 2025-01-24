@@ -42,14 +42,14 @@ export default function Page() {
   return (
     <Container maxWidth='lg'>
 
-      <div className="container mx-auto font-sans p-5 bg-gradient-to-b from-white to-gray-50 min-h-screen">
+      <div className="font-sans p-5 bg-gradient-to-b from-white to-gray-50 min-h-screen">
 
         {/* Titre */}
-        <h1 className="text-teal-600 text-center text-4xl font-extrabold mb-8">
+        <h1 className="text-teal-600 mt-14 text-center text-4xl font-extrabold mb-8">
           🌟 Nos Offres du Moment 🌟
         </h1>
 
-        <div className="container mx-sm flex flex-col items-center shadow-md p-1">
+        <div className="container mx-sm flex flex-col items-center shadow-2xl p-1">
 
           {/* Description de l'offre */}
           <div className="text-lg text-center mt-5 leading-relaxed mb-10 max-w-2xl text-gray-700 shadow-lg p-4 rounded-md">
@@ -113,5 +113,6 @@ export default function Page() {
         </div>
       </div>
     </Container>
+
   );
 }

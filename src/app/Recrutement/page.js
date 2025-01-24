@@ -27,7 +27,7 @@ export default function RecruitmentPage() {
       {/* Section Header */}
       <Box
         sx={{
-          mt: 8,
+          mt: 10,
           textAlign: 'center',
           py: 4,
           backgroundColor: '#e6f8f6',
@@ -41,9 +41,7 @@ export default function RecruitmentPage() {
           Rejoignez notre équipe !
         </Typography>
         <Typography variant="h6" sx={{ maxWidth: '700px', mx: 'auto' }}>
-          Nous sommes à la recherche de talents passionnés pour rejoindre notre
-          équipe dynamique. Sélectionnez un type de poste et commencez votre
-          aventure avec nous !
+          Nous sommes toujours à la recherche de personnes talentueuses et motivées pour rejoindre notre équipe dynamique. Faites-nous parvenir vos coordonnées ainsi qu’un message de motivation en bas de cette page, et démarrez peut-être une belle aventure avec nous !
         </Typography>
       </Box>
 
