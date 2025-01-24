@@ -83,15 +83,6 @@ export default function Home() {
                     <Link href="/Carte" className="mt-6 inline-block px-6 py-3 bg-teal-600 text-white rounded-lg shadow-lg hover:bg-teal-700">Voir le Menu</Link>
                 </section>
             </main>
-
-            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
-                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
-                <p>
-                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
-                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
-                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
-                </p>
-            </footer>
         </>
     );
 }

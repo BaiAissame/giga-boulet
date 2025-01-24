@@ -148,15 +148,7 @@ export default function RecruitmentPage() {
         </form>
       </Box>
 
-      
-            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
-                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
-                <p>
-                    <Link href="/" className="text-teal-400 hover:underline">Accueil</Link> |&nbsp;
-                    <Link href="/menu" className="text-teal-400 hover:underline">Menu</Link> |&nbsp;
-                    <Link href="/Offre" className="text-teal-400 hover:underline">Offre</Link>
-                </p>
-            </footer>
+
     </Container>
   );
 }
