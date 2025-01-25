@@ -9,17 +9,17 @@ import Link from "next/link";
 export default function MainNav() {
   // Tableau pour les items de navigation
   const navItems = [
-   { label: "Accueil", href: "/" },
+    { label: "Accueil", href: "/" },
     { label: "Carte", href: "/Carte" },
     { label: "Engagements", href: "/Engagements" },
     { label: "Famille", href: "/Famille" },
     { label: "Offre", href: "/Offre" },
-    { label: "Propos", href: "/Propos" },
+    { label: "À Propos", href: "/Propos" },
     { label: "Recrutement", href: "/Recrutement" },
   ];
 
   return (
-    <nav className="bg-teal-800 text-white shadow-lg hidden md:block  fixed top-0 w-full z-50">
+    <nav className="bg-teal-800 text-white shadow-lg hidden md:block sticky top-0 w-full z-50">
       <div className="container mx-auto flex justify-center items-center py-4">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-6">

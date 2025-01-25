@@ -1,4 +1,6 @@
-import Head from 'next/head'
+
+import Head from 'next/head';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -135,14 +137,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <footer className="text-center mt-16">
-          <p className="text-xl text-gray-700">
-            Merci de choisir Gigaboulet pour savourer des burgers de
-            qualité. Nous sommes impatients de vous servir et de
-            vous offrir une expérience inoubliable inspirée des
-            Dalton !
-          </p>
-        </footer>
+
       </div>
     </>
   )

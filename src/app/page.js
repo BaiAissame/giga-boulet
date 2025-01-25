@@ -21,7 +21,7 @@ export default function Home() {
                 {/* Section héroïque */}
           <section
   className="relative bg-cover bg-center text-white py-16"
-  style={{ backgroundImage: 'url(/offres.webp)' }}
+  style={{ backgroundImage: 'url(https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/banner.jpg)' }}
 >
   {/* Superposition semi-transparente */}
   <div className="absolute inset-0 bg-black/50"></div>
@@ -40,17 +40,17 @@ export default function Home() {
                     <h2 className="text-3xl font-bold text-teal-900 mb-6">Nos Spécialités</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <article className="shadow-md rounded-lg p-4 bg-gray-50">
-                            <Image src="/images/burger-special.jpg" alt="Burger Spécial" width={400} height={300} className="rounded-lg" />
+                            <Image src="https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/burger.svg" alt="Burger Spécial" width={400} height={300} className="rounded-lg" />
                             <h3 className="mt-4 text-xl font-bold text-teal-900">Le Giga Burger</h3>
                             <p className="text-gray-600 mt-2">Un mélange parfait de saveurs avec notre viande 100% locale et des ingrédients frais.</p>
                         </article>
                         <article className="shadow-md rounded-lg p-4 bg-gray-50">
-                            <Image src="/images/frites-special.jpg" alt="Frites Maison" width={400} height={300} className="rounded-lg" />
+                            <Image src="https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/frite.png" alt="Frites Maison" width={400} height={300} className="rounded-lg" />
                             <h3 className="mt-4 text-xl font-bold text-teal-900">Frites Maison</h3>
                             <p className="text-gray-600 mt-2">Des frites croustillantes préparées avec soin pour accompagner votre repas.</p>
                         </article>
                         <article className="shadow-md rounded-lg p-4 bg-gray-50">
-                            <Image src="/images/dessert-special.jpg" alt="Desserts Gourmands" width={400} height={300} className="rounded-lg" />
+                            <Image src="https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/dessert.svg" alt="Desserts Gourmands" width={400} height={300} className="rounded-lg" />
                             <h3 className="mt-4 text-xl font-bold text-teal-900">Desserts Gourmands</h3>
                             <p className="text-gray-600 mt-2">Terminez votre repas avec nos desserts maison, un vrai délice.</p>
                         </article>
@@ -83,15 +83,6 @@ export default function Home() {
                     <Link href="/Carte" className="mt-6 inline-block px-6 py-3 bg-teal-600 text-white rounded-lg shadow-lg hover:bg-teal-700">Voir le Menu</Link>
                 </section>
             </main>
-
-            <footer className="bg-gray-800 text-white py-6 text-center mt-8">
-                <p>&copy; 2025 Giga Boulet. Tous droits réservés.</p>
-                <p>Suivez-nous sur&nbsp;
-                    <Link href="https://facebook.com/gigaboulet" className="text-teal-400 hover:underline">Facebook</Link>,&nbsp;
-                    <Link href="https://instagram.com/gigaboulet" className="text-teal-400 hover:underline">Instagram</Link>,&nbsp;
-                    <Link href="https://twitter.com/gigaboulet" className="text-teal-400 hover:underline">Twitter</Link>
-                </p>
-            </footer>
         </>
     );
 }

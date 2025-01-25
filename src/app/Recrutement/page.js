@@ -240,5 +240,5 @@ export default function RecruitmentPage() {
         </Box>
       </Container >
     </>
-  );
+  )
 }

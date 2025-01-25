@@ -4,7 +4,7 @@ import MobileNav from './mobile-nav';
 
 export default function Header() {
   return (
-    <header className='top-0 w-full border-b'>
+    <div className='top-0 w-full border-b'>
 
         {/* Desktop */}
         <MainNav />
@@ -14,6 +14,6 @@ export default function Header() {
 
         
 
-    </header>
+    </div>
   );
 }
