@@ -53,7 +53,7 @@ export default function Propos() {
                 <section id="histoire" className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Notre Histoire</h2>
                     <p>Depuis 2010, Giga Boulet s&apos;engage à offrir des repas délicieux et accessibles. Ce qui a commencé comme une petite aventure locale est aujourd&apos;hui devenu une chaîne appréciée dans toute la région. Nous croyons en la puissance de la bonne nourriture pour rassembler les gens et créer des souvenirs.</p>
-                    <Image src="/images/histoire.jpg" alt="Chronologie de Giga Boulet" width={600} height={400} className="mt-4 rounded-lg shadow-md" />
+                    <Image src="https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/chronologie.webp" alt="Chronologie de Giga Boulet" width={600} height={400} className="mt-4 rounded-lg shadow-md" />
                 </section>
 
                 {/* Section Valeurs */}

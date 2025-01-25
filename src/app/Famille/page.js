@@ -25,7 +25,7 @@ export default function Famille() {
                 {/* Section héroïque  */}
 <section
   className="relative bg-cover bg-center text-white py-16"
-  style={{ backgroundImage: 'url(/offres.webp)' }}
+  style={{ backgroundImage: 'url(https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/banner.jpg)' }}
 >
   {/* Superposition semi-transparente */}
   <div className="absolute inset-0 bg-black/50"></div>
@@ -48,7 +48,7 @@ export default function Famille() {
                 <section className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Pour les Enfants</h2>
                     <p>Des menus enfants équilibrés, des cadeaux surprises et une aire de jeux sécurisée pour que vos petits passent un moment inoubliable. Nos repas pour enfants sont conçus pour répondre à leurs besoins nutritionnels tout en étant délicieux et amusants. De plus, notre aire de jeux est régulièrement entretenue pour garantir leur sécurité et leur plaisir.</p>
-                    <img src="/images/aire-de-jeux.jpg" alt="Aire de jeux pour enfants chez Giga Boulet" className="mt-4 rounded-lg shadow-md" />
+                    <img src="https://yvt0xuhvxht9er2d.public.blob.vercel-storage.com/images/aire_de_jeu.webp" alt="Aire de jeux pour enfants chez Giga Boulet" className="mt-4 rounded-lg shadow-md" />
                 </section>
 
                 {/* Section parents pour mettre en avant leur confort */}
