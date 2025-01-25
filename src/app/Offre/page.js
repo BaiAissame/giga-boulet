@@ -56,7 +56,7 @@ export default function Page() {
         <div className="font-sans p-5 bg-gradient-to-b from-white to-gray-50 min-h-screen">
 
           {/* Titre */}
-          <h1 className="text-teal-600 mt-14 text-center text-2xl font-extrabold mb-6">
+          <h1 className="text-teal-600 mt-4 text-center text-2xl font-extrabold mb-6">
             🌟 Offre Spéciale : Menu SmartBoulet à 5€ avec 5 Produits Savoureux - À Ne Pas Manquer ! 
           </h1>
 
