@@ -32,7 +32,7 @@ export default async function CategoryPage() {
   return (
     <div className="flex min-h-screen">
       {/* Section de la liste des catégories (Sidebar) */}
-      <section className="w-[20vw] h-[100vh] bg-gray-100">
+      <section className="hidden md:block w-[20vw] h-[100vh] bg-gray-100">
         <table className="w-full h-full table-fixed border-collapse">
           <tbody>
             {categories.map((category) => (
@@ -47,24 +47,24 @@ export default async function CategoryPage() {
       </section>
 
       {/* Section principale */}
-      <section className="flex-1 p-8">
+      <section className="flex-1 p-4 md:p-8">
         {/* Titre et description */}
-        <div className="text-center py-12 bg-gray-50">
-          <h1 className="text-4xl font-bold text-teal-800 mb-4">
+        <div className="text-center py-8 md:py-12 bg-gray-50">
+          <h1 className="text-2xl md:text-4xl font-bold text-teal-800 mb-4">
             Notre Carte
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Aucune excuse, faites-vous plaisir : il y en a pour tous les goûts !
           </p>
         </div>
 
         {/* Grille des cartes */}
-        <ul className="grid grid-cols-3 gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {categories.map((category) => (
-            <li key={category.id} className="m-4">
+            <li key={category.id} className="m-2 md:m-4">
               <Link href={category.link}>
                 <article>
-                  <Card className="w-full max-w-sm mx-auto">
+                  <Card className="w-full max-w-xs md:max-w-sm mx-auto">
                     <CardHeader>
                       <CardTitle className="text-center">{category.title}</CardTitle>
                     </CardHeader>
