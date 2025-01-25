@@ -14,7 +14,7 @@ export default function MainNav() {
     { label: "Engagements", href: "/Engagements" },
     { label: "Famille", href: "/Famille" },
     { label: "Offre", href: "/Offre" },
-    { label: "Propos", href: "/Propos" },
+    { label: "À Propos", href: "/Propos" },
     { label: "Recrutement", href: "/Recrutement" },
   ];
 

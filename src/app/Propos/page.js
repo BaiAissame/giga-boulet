@@ -77,7 +77,7 @@ export default function Propos() {
                 <section id="mission" className="p-8 bg-white shadow-lg rounded-lg mt-8 mx-auto max-w-4xl text-center">
                     <h2 className="text-2xl font-bold text-teal-900 mb-4">Notre Mission</h2>
                     <p>Chez Giga Boulet, notre mission est simple mais puissante : offrir des repas savoureux et de qualité tout en créant un environnement chaleureux pour nos clients. Nous croyons que chaque repas est une occasion de se connecter et de partager des moments précieux.</p>
-                    <Link href="/menu" className="text-teal-400 hover:underline block mt-4">
+                    <Link href="/Carte" className="text-teal-400 hover:underline block mt-4">
                         Découvrez notre menu
                     </Link>
                 </section>
